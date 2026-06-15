@@ -838,3 +838,6 @@
 /Users/yousef/My-Repos/clean/E-tickets.UI/obj/Debug/net10.0/E-tickets.UI.pdb
 /Users/yousef/My-Repos/clean/E-tickets.UI/obj/Debug/net10.0/E-tickets.UI.genruntimeconfig.cache
 /Users/yousef/My-Repos/clean/E-tickets.UI/obj/Debug/net10.0/ref/E-tickets.UI.dll
+/Users/yousef/My-Repos/clean/E-tickets.UI/obj/Debug/net10.0/E-tickets.UI.sourcelink.json
+/Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/Npgsql.dll
+/Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

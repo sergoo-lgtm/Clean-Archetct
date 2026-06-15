@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qesDMmWuVzU=",
+  "dgSpecHash": "Lv9AcMsMj9o=",
   "success": true,
   "projectFilePath": "/Users/yousef/My-Repos/clean/E-tickets.UI/E-tickets.UI.csproj",
   "expectedPackageFiles": [
@@ -106,6 +106,8 @@
     "/Users/yousef/.nuget/packages/microsoft.visualstudio.web.codegenerators.mvc/10.0.2/microsoft.visualstudio.web.codegenerators.mvc.10.0.2.nupkg.sha512",
     "/Users/yousef/.nuget/packages/mono.texttemplating/3.0.0/mono.texttemplating.3.0.0.nupkg.sha512",
     "/Users/yousef/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/yousef/.nuget/packages/npgsql/10.0.3/npgsql.10.0.3.nupkg.sha512",
+    "/Users/yousef/.nuget/packages/npgsql.entityframeworkcore.postgresql/10.0.2/npgsql.entityframeworkcore.postgresql.10.0.2.nupkg.sha512",
     "/Users/yousef/.nuget/packages/nuget.common/6.12.1/nuget.common.6.12.1.nupkg.sha512",
     "/Users/yousef/.nuget/packages/nuget.configuration/6.12.1/nuget.configuration.6.12.1.nupkg.sha512",
     "/Users/yousef/.nuget/packages/nuget.dependencyresolver.core/6.12.1/nuget.dependencyresolver.core.6.12.1.nupkg.sha512",
