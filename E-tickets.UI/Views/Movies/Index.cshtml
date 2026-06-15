@@ -1,0 +1,71 @@
+@using eTickets.DTO.MovieDTOS
+@model IEnumerable<MovieDto>
+
+@{
+    ViewData["Title"] = "List of Movies";
+}
+
+<div class="row g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm movie-card">
+                <div class="card-header border-0 bg-white pt-3 px-3">
+                    <h5 class="card-title mb-0 fw-semibold d-flex justify-content-between align-items-center">
+                        @item.Name
+                        <span class="badge rounded-pill bg-light text-dark">@item.MovieCategory</span>
+                    </h5>
+                </div>
+
+                <div class="position-relative px-3">
+                    <img src="@item.ImageURL" class="img-fluid rounded-4 movie-poster" alt="@item.Name">
+                    <span class="movie-price-badge">EGP @item.Price.ToString("0.00")</span>
+                </div>
+
+                <div class="card-body px-3 pb-2">
+                    <p class="card-text text-muted">@item.Description</p>
+                    <p class="card-text mb-2"><b>Cinema:</b> @item.CinemaName</p>
+                    <p class="card-text mb-2"><b>Producer:</b> @item.ProducerName</p>
+                    <p class="card-text mb-2"><b>Start Date:</b> @item.StartDate.ToString("dd MMM yyyy")</p>
+                    <p class="card-text mb-2"><b>End Date:</b> @item.EndDate.ToString("dd MMM yyyy")</p>
+                    <p class="card-text mb-0">
+                        <b>Status:</b>
+                        @if (DateTime.Now >= item.StartDate && DateTime.Now <= item.EndDate)
+                        {
+                            <span class="badge bg-success-subtle text-success-emphasis">Available</span>
+                        }
+                        else if (DateTime.Now > item.EndDate)
+                        {
+                            <span class="badge bg-danger-subtle text-danger-emphasis">Expired</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-primary-subtle text-primary-emphasis">Upcoming</span>
+                        }
+                    </p>
+                </div>
+
+                <div class="card-footer bg-white border-0 d-flex gap-2 px-3 pb-3 pt-1">
+                    <a class="btn btn-outline-dark flex-fill" asp-action="Details" asp-route-id="@item.Id">
+                        <i class="bi bi-eye-fill"></i> Show Details
+                    </a>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <form asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@item.Id" method="post" class="flex-fill">
+                            <input type="hidden" name="returnUrl" value="@Context.Request.Path@Context.Request.QueryString" />
+                            <button type="submit" class="btn btn-success w-100">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <a class="btn btn-outline-primary flex-fill" asp-controller="Account" asp-action="Login">
+                            <i class="bi bi-box-arrow-in-right"></i> Login to Buy
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

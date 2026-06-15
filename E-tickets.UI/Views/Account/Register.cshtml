@@ -1,0 +1,77 @@
+﻿@model eTickets.DTO.RegisterDTO
+@{
+	ViewBag.Title = "Register";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow-lg p-4">
+                <h3 class="text-center mb-4">Create Account</h3>
+
+                <p class="text-center">
+                    Already Registered?
+                    <a asp-action="Login" asp-controller="Account">Login</a>
+                </p>
+
+                <form asp-controller="Account" asp-action="Register" method="post">
+
+                    <div class="mb-3">
+                        <label asp-for="PersonName" class="form-label"></label>
+                        <input asp-for="PersonName" class="form-control" />
+                        <span asp-validation-for="PersonName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label"></label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="ConfirmPassword" class="form-label"></label>
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Phone" class="form-label"></label>
+                        <input asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        Register
+                    </button>
+
+                    <div asp-validation-summary="All" class="text-danger mt-3"></div>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="text-danger mt-3">
+                            <ul>
+                                @foreach (var error in ViewBag.Error)
+                                {
+                                    <li>@error</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,95 @@
+@model eTickets.DTO.MovieDTOS.MovieDto
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<div class="row justify-content-center">
+    <div class="col-xl-10">
+        <div class="card border-0 shadow-lg overflow-hidden movie-details-card">
+            <div class="row g-0">
+                <div class="col-lg-5">
+                    <img src="@Model.ImageURL" alt="@Model.Name" class="img-fluid h-100 w-100 object-fit-cover" />
+                </div>
+                <div class="col-lg-7">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                            <div>
+                                <span class="badge bg-dark-subtle text-dark mb-2">@Model.MovieCategory</span>
+                                <h1 class="h2 mb-1">@Model.Name</h1>
+                                <p class="text-muted mb-0">@Model.CinemaName</p>
+                            </div>
+                            <div class="movie-details-price">EGP @Model.Price.ToString("0.00")</div>
+                        </div>
+
+                        <p class="lead text-muted">@Model.Description</p>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <div class="detail-panel">
+                                    <span class="detail-label">Producer</span>
+                                    <div class="detail-value">@Model.ProducerName</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-panel">
+                                    <span class="detail-label">Cinema</span>
+                                    <div class="detail-value">@Model.CinemaName</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-panel">
+                                    <span class="detail-label">Start Date</span>
+                                    <div class="detail-value">@Model.StartDate.ToString("dd MMM yyyy")</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-panel">
+                                    <span class="detail-label">End Date</span>
+                                    <div class="detail-value">@Model.EndDate.ToString("dd MMM yyyy")</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h2 class="h5 mb-3">Actors</h2>
+                            <div class="d-flex flex-wrap gap-2">
+                                @if (Model.ActorNames.Any())
+                                {
+                                    @foreach (var actor in Model.ActorNames)
+                                    {
+                                        <span class="badge rounded-pill text-bg-light actor-chip">@actor</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span class="text-muted">No actors assigned yet.</span>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2">
+                            <a class="btn btn-outline-dark" asp-action="Index">
+                                <i class="bi bi-arrow-left"></i> Back to Movies
+                            </a>
+                            @if (User.Identity?.IsAuthenticated == true)
+                            {
+                                <form asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@Model.Id" method="post">
+                                    <input type="hidden" name="returnUrl" value="@Context.Request.Path@Context.Request.QueryString" />
+                                    <button type="submit" class="btn btn-success">
+                                        <i class="bi bi-cart-plus"></i> Add to Cart
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <a class="btn btn-outline-primary" asp-controller="Account" asp-action="Login">
+                                    <i class="bi bi-box-arrow-in-right"></i> Login to Buy
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

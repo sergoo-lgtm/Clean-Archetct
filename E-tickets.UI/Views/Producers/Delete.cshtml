@@ -1,0 +1,42 @@
+@model eTickets.DTO.ProducerDTOS.ProducerDto
+@{
+    ViewData["Title"] = "Delete Producer";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <h1 class="text-center text-danger">Delete Producer</h1>
+        <p class="text-center text-muted">Please confirm that you want to remove this producer.</p>
+
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <img class="border-danger rounded-circle" style="max-width: 180px; height: 180px; object-fit: cover;" src="@Model.ProfilePictureURL" alt="@Model.FullName" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label fw-bold"></label>
+                            <input asp-for="FullName" class="form-control" readonly />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Bio" class="form-label fw-bold"></label>
+                            <textarea asp-for="Bio" class="form-control" rows="4" readonly></textarea>
+                        </div>
+
+                        <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bi bi-trash"></i> Confirm Delete
+                            </button>
+                            <a class="btn btn-outline-secondary" asp-action="Index">
+                                <i class="bi bi-arrow-left"></i> Cancel
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+@model eTickets.ViewModels.ShoppingCartViewModel
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<div class="row justify-content-center">
+    <div class="col-xl-10">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+            <div>
+                <h1 class="h3 mb-1">Shopping Cart</h1>
+                <p class="text-muted mb-0">A clean summary of your selected tickets.</p>
+            </div>
+            <a class="btn btn-outline-dark" asp-controller="Movies" asp-action="Index">
+                <i class="bi bi-film"></i> Continue Browsing
+            </a>
+        </div>
+
+        @if (!Model.Items.Any())
+        {
+            <div class="card border-0 shadow-sm cart-shell">
+                <div class="card-body py-5 text-center">
+                    <i class="bi bi-bag display-4 text-muted"></i>
+                    <h2 class="h4 mt-3">Your cart is empty</h2>
+                    <p class="text-muted mb-4">Add a movie ticket to see it here.</p>
+                    <a class="btn btn-dark" asp-controller="Movies" asp-action="Index">Explore Movies</a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm cart-shell">
+                        <div class="card-body p-0">
+                            @foreach (var item in Model.Items)
+                            {
+                                <div class="cart-item d-flex flex-column flex-md-row align-items-md-center gap-3 p-3">
+                                    <img src="@item.ImageUrl" alt="@item.MovieName" class="cart-item-image" />
+                                    <div class="flex-grow-1">
+                                        <h2 class="h5 mb-1">@item.MovieName</h2>
+                                        <p class="text-muted mb-1">EGP @item.Price.ToString("0.00") each</p>
+                                        <p class="mb-0 small text-secondary">Quantity: @item.Quantity</p>
+                                    </div>
+                                    <div class="text-md-end">
+                                        <div class="fw-semibold mb-2">EGP @item.LineTotal.ToString("0.00")</div>
+                                        <form asp-action="RemoveFromCart" asp-route-id="@item.MovieId" method="post">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-dash-circle"></i> Remove
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm cart-summary">
+                        <div class="card-body p-4">
+                            <h2 class="h5 mb-4">Order Summary</h2>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Items</span>
+                                <span>@Model.Items.Sum(i => i.Quantity)</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="text-muted">Total</span>
+                                <span class="fw-bold">EGP @Model.Total.ToString("0.00")</span>
+                            </div>
+                            <button class="btn btn-dark w-100" type="button" disabled>
+                                Checkout Coming Soon
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

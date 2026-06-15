@@ -1,0 +1,39 @@
+@model eTickets.DTO.CinemaDTOS.CinemaDto
+@{
+    ViewData["Title"] = "Cinema Details";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <h1 class="text-center">Cinema Details</h1>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <div class="form-group text-center mb-4">
+                    <img class="border-info rounded-circle" style="max-width: 180px; height: 180px; object-fit: cover;" src="@Model.Logo" alt="@Model.Name" />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Name" class="control-label fw-bold"></label>
+                    <input asp-for="Name" class="form-control" readonly />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="control-label fw-bold"></label>
+                    <textarea asp-for="Description" class="form-control" rows="4" readonly></textarea>
+                </div>
+
+                <div class="form-group mt-4">
+                    <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model.Id">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@Model.Id">
+                        <i class="bi bi-trash"></i> Delete
+                    </a>
+                    <a class="btn btn-outline-secondary float-right" asp-action="Index">
+                        <i class="bi bi-arrow-left"></i> Show All
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
