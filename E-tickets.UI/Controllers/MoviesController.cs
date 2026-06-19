@@ -1,3 +1,4 @@
+using eTickets.DTO.MovieDTOS;
 using eTickets.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +13,26 @@ public class MoviesController : Controller
         _service = service;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string? searchString)
     {
-        var movies = await _service.GetAllMoviesAsync();
+        IEnumerable<MovieDto> movies;
+
+        if (!string.IsNullOrWhiteSpace(searchString))
+        {
+            movies = await _service.SearchMoviesAsync(searchString);
+            ViewData["SearchString"] = searchString;
+        }
+        else
+        {
+            movies = await _service.GetAllMoviesAsync();
+        }
+
         return View(movies);
+    }
+
+    public async Task<IActionResult> Filter(string? searchString)
+    {
+        return RedirectToAction(nameof(Index), new { searchString });
     }
 
     public async Task<IActionResult> Details(int id)

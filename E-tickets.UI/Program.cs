@@ -40,6 +40,7 @@ builder.Services.AddScoped<ActorService>();
 builder.Services.AddScoped<CinemaService>();
 builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<ProducerService>();
+builder.Services.AddScoped<CartService>();
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     {
         options.Password.RequireDigit = true;
