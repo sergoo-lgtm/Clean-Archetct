@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject CartService CartService
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -87,6 +88,23 @@
                         </button>
 
                     </form>
+
+                    <!-- CART -->
+                    <a class="btn btn-outline-dark me-2 position-relative"
+                       asp-controller="ShoppingCart"
+                       asp-action="Index">
+                        <i class="bi-cart"></i> Cart
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            var cartCount = CartService.GetCartCount();
+                            if (cartCount > 0)
+                            {
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    @cartCount
+                                </span>
+                            }
+                        }
+                    </a>
 
                     <!-- AUTH -->
                     @if (User.Identity?.IsAuthenticated != true)

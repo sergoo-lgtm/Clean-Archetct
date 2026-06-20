@@ -841,3 +841,9 @@
 /Users/yousef/My-Repos/clean/E-tickets.UI/obj/Debug/net10.0/E-tickets.UI.sourcelink.json
 /Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/Npgsql.dll
 /Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/publish/web.config
+/Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/publish/appsettings.Development.json
+/Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/publish/appsettings.json
+/Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/publish/E-tickets.UI.deps.json
+/Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/publish/E-tickets.UI.runtimeconfig.json
+/Users/yousef/My-Repos/clean/E-tickets.UI/bin/Debug/net10.0/publish/E-tickets.UI.staticwebassets.endpoints.json
