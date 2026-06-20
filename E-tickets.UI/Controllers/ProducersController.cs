@@ -2,7 +2,7 @@ using eTickets.DTO.ProducerDTOS;
 using eTickets.Middlewares;
 using eTickets.Service;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Authorization;
 namespace eTickets.Controllers;
 
 public class ProducersController : Controller
@@ -32,7 +32,7 @@ public class ProducersController : Controller
             return NotFound();
         }
     }
-
+    [Authorize(Roles = "Admin,Editor")]
     public async Task<IActionResult> Edit(int id)
     {
         try
@@ -49,6 +49,7 @@ public class ProducersController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [Authorize(Roles = "Admin,Editor")]
     public async Task<IActionResult> Edit(int id, ProducerInputDto producerDto)
     {
         if (!ModelState.IsValid)
@@ -73,7 +74,7 @@ public class ProducersController : Controller
             return NotFound();
         }
     }
-
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Delete(int id)
     {
         try

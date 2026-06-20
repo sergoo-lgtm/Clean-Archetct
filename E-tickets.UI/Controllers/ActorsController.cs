@@ -3,6 +3,7 @@ using eTickets.Service;
 using eTickets.DTO.ActorDTOS; 
 using Microsoft.AspNetCore.Mvc;
 using eTickets.Middlewares; 
+using Microsoft.AspNetCore.Authorization;
 
 namespace eTickets.Controllers;
 
@@ -20,15 +21,20 @@ public class ActorsController : Controller
         return View(data);
     }
 
+   
+
+    [Authorize(Roles = "Admin")]
     public IActionResult Create()
     {
         return View();
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(ActorInputDto actorDto) 
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> Create(ActorInputDto actorDto)
     {
-        if (!ModelState.IsValid) return View(actorDto);
+        if (!ModelState.IsValid)
+            return View(actorDto);
 
         try
         {
@@ -38,7 +44,6 @@ public class ActorsController : Controller
         catch (BusinessException ex)
         {
             ModelState.AddModelError(string.Empty, ex.Message);
-        
             return View(actorDto);
         }
     }
@@ -47,6 +52,7 @@ public class ActorsController : Controller
         var actor = await _service.GetActorAsync(id); 
         return View(actor);
     }
+    [Authorize(Roles = "Admin,Editor")]
     public async Task<IActionResult> Edit(int id)
     {
         var actor = await _service.GetActorAsync(id);
@@ -54,22 +60,13 @@ public class ActorsController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = "Admin,Editor")]
     public async Task<IActionResult> Edit(int id, ActorInputDto actorDto)
     {
-        if (!ModelState.IsValid) return View(actorDto);
+        if (!ModelState.IsValid)
+            return View(actorDto);
 
         await _service.UpdateAsync(id, actorDto);
-        return RedirectToAction(nameof(Index));
-    }
-    public async Task<IActionResult> Delete(int id)
-    {
-        var actor = await _service.GetActorAsync(id);
-        return View(actor);
-    }
-    [HttpPost, ActionName("Delete")]
-    public async Task<IActionResult> DeleteConfirmed(int id)
-    {
-        await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
 }

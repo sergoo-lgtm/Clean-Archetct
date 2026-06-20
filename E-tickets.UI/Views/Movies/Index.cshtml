@@ -1,8 +1,9 @@
-@using eTickets.DTO.MovieDTOS
 @model IEnumerable<MovieDto>
 
 @{
-    ViewData["Title"] = "List of Movies";
+    ViewData["Title"] = string.IsNullOrEmpty(ViewData["SearchString"] as string)
+        ? "List of Movies"
+        : $"Search results for \"{ViewData["SearchString"]}\"";
 }
 
 <div class="row g-4">

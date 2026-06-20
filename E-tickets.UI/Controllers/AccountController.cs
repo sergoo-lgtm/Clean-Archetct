@@ -55,13 +55,13 @@ namespace eTickets.Controllers
                 return View(registerDTO);
             }
         }
-        [HttpGet("Login")]
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-        [HttpPost("Login")]
+        [HttpPost]
         public async Task<IActionResult> Login(LoginDTO loginDtodto)
         {
             if (ModelState.IsValid == false)

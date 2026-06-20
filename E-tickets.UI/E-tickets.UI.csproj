@@ -76,6 +76,12 @@
       <_ContentIncludedByDefault Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
       <_ContentIncludedByDefault Remove="Views\_ViewImports.cshtml" />
       <_ContentIncludedByDefault Remove="Views\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="publish\web.config" />
+      <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\E-tickets.UI.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\E-tickets.UI.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="publish\E-tickets.UI.staticwebassets.endpoints.json" />
     </ItemGroup>
 
     <ItemGroup>
