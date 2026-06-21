@@ -1,0 +1,213 @@
+2026-06-22 02:45:47.648 +03:00 [INF] User profile is available. Using '/Users/yousef/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-06-22 02:45:48.529 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-22 02:45:48.581 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2026-06-22 02:45:48.792 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Cinemas" AS c)
+2026-06-22 02:45:48.802 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Actors" AS a)
+2026-06-22 02:45:48.805 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Producers" AS p)
+2026-06-22 02:45:48.808 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Movies" AS m)
+2026-06-22 02:45:48.811 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Actors_Movies" AS a)
+2026-06-22 02:45:48.919 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@normalizedName='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @normalizedName
+LIMIT 1
+2026-06-22 02:45:48.972 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @normalizedName
+LIMIT 1
+2026-06-22 02:45:48.974 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@normalizedName='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @normalizedName
+LIMIT 1
+2026-06-22 02:45:48.985 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedEmail='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PersonName", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @normalizedEmail
+LIMIT 2
+2026-06-22 02:45:49.093 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @normalizedRoleName
+LIMIT 2
+2026-06-22 02:45:49.149 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Guid), @p1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @p AND a."RoleId" = @p1
+LIMIT 1
+2026-06-22 02:45:49.166 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedEmail='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PersonName", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @normalizedEmail
+LIMIT 2
+2026-06-22 02:45:49.231 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @normalizedRoleName
+LIMIT 2
+2026-06-22 02:45:49.233 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Guid), @p1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @p AND a."RoleId" = @p1
+LIMIT 1
+2026-06-22 02:45:49.235 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedEmail='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PersonName", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @normalizedEmail
+LIMIT 2
+2026-06-22 02:45:49.299 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ConcurrencyStamp", a."Name", a."NormalizedName"
+FROM "AspNetRoles" AS a
+WHERE a."NormalizedName" = @normalizedRoleName
+LIMIT 2
+2026-06-22 02:45:49.300 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Guid), @p1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."UserId", a."RoleId"
+FROM "AspNetUserRoles" AS a
+WHERE a."UserId" = @p AND a."RoleId" = @p1
+LIMIT 1
+2026-06-22 02:45:49.356 +03:00 [INF] Now listening on: http://0.0.0.0:5046
+2026-06-22 02:45:49.358 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-22 02:45:49.358 +03:00 [INF] Hosting environment: Development
+2026-06-22 02:45:49.358 +03:00 [INF] Content root path: /Users/yousef/mysite/Clean-Archetct/E-tickets.UI
+2026-06-22 02:45:58.840 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/ - null null
+2026-06-22 02:45:58.863 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-22 02:45:58.952 +03:00 [INF] Executing endpoint 'eTickets.Controllers.MoviesController.Index (E-tickets.UI)'
+2026-06-22 02:45:58.988 +03:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller eTickets.Controllers.MoviesController (E-tickets.UI).
+2026-06-22 02:45:59.029 +03:00 [INF] Executing action method eTickets.Controllers.MoviesController.Index (E-tickets.UI) - Validation state: "Valid"
+2026-06-22 02:45:59.202 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."CinemaId", m."Description", m."EndDate", m."ImageURL", m."MovieCategory", m."Name", m."Price", m."ProducerId", m."StartDate", c."Id", c."Description", c."Logo", c."Name", p."Id", p."Bio", p."FullName", p."ProfilePictureURL"
+FROM "Movies" AS m
+INNER JOIN "Cinemas" AS c ON m."CinemaId" = c."Id"
+INNER JOIN "Producers" AS p ON m."ProducerId" = p."Id"
+ORDER BY m."Name"
+2026-06-22 02:45:59.223 +03:00 [INF] Executed action method eTickets.Controllers.MoviesController.Index (E-tickets.UI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 189.8481ms.
+2026-06-22 02:45:59.238 +03:00 [INF] Executing ViewResult, running view Index.
+2026-06-22 02:45:59.482 +03:00 [INF] Executed ViewResult - view Index executed in 241.9581ms.
+2026-06-22 02:45:59.490 +03:00 [INF] Executed action eTickets.Controllers.MoviesController.Index (E-tickets.UI) in 499.5325ms
+2026-06-22 02:45:59.491 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/eTickets.styles.css - null null
+2026-06-22 02:45:59.491 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-06-22 02:45:59.493 +03:00 [INF] Executed endpoint 'eTickets.Controllers.MoviesController.Index (E-tickets.UI)'
+2026-06-22 02:45:59.491 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/css/auth.css?v=3zK9LZ4lj0OVDzF7iYnJKYTFDdAdpBE-y2O0YG4S7Js - null null
+2026-06-22 02:45:59.491 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/css/site.css?v=IbT0whtzrZBwB2zkSNzIOEja05OlYfYz0mUnZ2PAqa8 - null null
+2026-06-22 02:45:59.502 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/movies/ColdSoles.jpg - null null
+2026-06-22 02:45:59.510 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/eTickets.styles.css - 404 0 null 18.2332ms
+2026-06-22 02:45:59.511 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://0.0.0.0:5046/eTickets.styles.css, Response status code: 404
+2026-06-22 02:45:59.519 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/movies/life.jpg - null null
+2026-06-22 02:45:59.521 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/lib/jquery/dist/jquery.min.js - null null
+2026-06-22 02:45:59.522 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/css/site.css'
+2026-06-22 02:45:59.522 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/css/site.css?v=IbT0whtzrZBwB2zkSNzIOEja05OlYfYz0mUnZ2PAqa8 - 200 2013 text/css 30.882ms
+2026-06-22 02:45:59.523 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/movies/Ghost.jpg - null null
+2026-06-22 02:45:59.524 +03:00 [INF] Sending file. Request path: '/images/movies/Ghost.jpg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/movies/Ghost.jpg'
+2026-06-22 02:45:59.526 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/movies/Ghost.jpg - 200 25182 image/jpeg 3.3003ms
+2026-06-22 02:45:59.534 +03:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/lib/jquery/dist/jquery.min.js'
+2026-06-22 02:45:59.535 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/lib/jquery/dist/jquery.min.js - 200 87533 text/javascript 13.6407ms
+2026-06-22 02:45:59.541 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-06-22 02:45:59.525 +03:00 [INF] Sending file. Request path: '/css/auth.css'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/css/auth.css'
+2026-06-22 02:45:59.547 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/css/auth.css?v=3zK9LZ4lj0OVDzF7iYnJKYTFDdAdpBE-y2O0YG4S7Js - 200 747 text/css 56.075ms
+2026-06-22 02:45:59.547 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css'
+2026-06-22 02:45:59.549 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/lib/bootstrap/dist/css/bootstrap.min.css - 200 232803 text/css 57.7319ms
+2026-06-22 02:45:59.549 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/ - 200 null text/html; charset=utf-8 722.8387ms
+2026-06-22 02:45:59.550 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js'
+2026-06-22 02:45:59.550 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80721 text/javascript 8.3378ms
+2026-06-22 02:45:59.547 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/movies/Race.jpg - null null
+2026-06-22 02:45:59.551 +03:00 [INF] Sending file. Request path: '/images/movies/ColdSoles.jpg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/movies/ColdSoles.jpg'
+2026-06-22 02:45:59.551 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/movies/ColdSoles.jpg - 200 958805 image/jpeg 49.8368ms
+2026-06-22 02:45:59.543 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - null null
+2026-06-22 02:45:59.553 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/js/site.js'
+2026-06-22 02:45:59.553 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - 200 227 text/javascript 10.4843ms
+2026-06-22 02:45:59.525 +03:00 [INF] Sending file. Request path: '/images/movies/life.jpg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/movies/life.jpg'
+2026-06-22 02:45:59.556 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/movies/life.jpg - 200 61455 image/jpeg 37.96ms
+2026-06-22 02:45:59.560 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/movies/scoob.jpg - null null
+2026-06-22 02:45:59.556 +03:00 [INF] Sending file. Request path: '/images/movies/Race.jpg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/movies/Race.jpg'
+2026-06-22 02:45:59.551 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/movies/TheShawshankRedemption.jpg - null null
+2026-06-22 02:45:59.560 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/movies/Race.jpg - 200 463503 image/jpeg 12.9632ms
+2026-06-22 02:45:59.569 +03:00 [INF] Sending file. Request path: '/images/movies/TheShawshankRedemption.jpg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/movies/TheShawshankRedemption.jpg'
+2026-06-22 02:45:59.570 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/movies/TheShawshankRedemption.jpg - 200 88665 image/jpeg 18.6515ms
+2026-06-22 02:45:59.610 +03:00 [INF] Sending file. Request path: '/images/movies/scoob.jpg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/movies/scoob.jpg'
+2026-06-22 02:45:59.610 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/movies/scoob.jpg - 200 2836664 image/jpeg 50.5973ms
+2026-06-22 02:46:01.659 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/Cinemas - null null
+2026-06-22 02:46:01.671 +03:00 [INF] Executing endpoint 'eTickets.Controllers.CinemasController.Index (E-tickets.UI)'
+2026-06-22 02:46:01.682 +03:00 [INF] Route matched with {action = "Index", controller = "Cinemas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller eTickets.Controllers.CinemasController (E-tickets.UI).
+2026-06-22 02:46:01.685 +03:00 [INF] Executing action method eTickets.Controllers.CinemasController.Index (E-tickets.UI) - Validation state: "Valid"
+2026-06-22 02:46:01.779 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Description", c."Logo", c."Name"
+FROM "Cinemas" AS c
+2026-06-22 02:46:01.795 +03:00 [INF] Executed action method eTickets.Controllers.CinemasController.Index (E-tickets.UI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 108.9842ms.
+2026-06-22 02:46:01.796 +03:00 [INF] Executing ViewResult, running view Index.
+2026-06-22 02:46:01.821 +03:00 [INF] Executed ViewResult - view Index executed in 26.193ms.
+2026-06-22 02:46:01.821 +03:00 [INF] Executed action eTickets.Controllers.CinemasController.Index (E-tickets.UI) in 139.1387ms
+2026-06-22 02:46:01.822 +03:00 [INF] Executed endpoint 'eTickets.Controllers.CinemasController.Index (E-tickets.UI)'
+2026-06-22 02:46:01.822 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/Cinemas - 200 null text/html; charset=utf-8 163.4011ms
+2026-06-22 02:46:01.852 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/eTickets.styles.css - null null
+2026-06-22 02:46:01.854 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/eTickets.styles.css - 404 0 null 1.7933ms
+2026-06-22 02:46:01.856 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://0.0.0.0:5046/eTickets.styles.css, Response status code: 404
+2026-06-22 02:46:01.858 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/cinemas/32.jpeg - null null
+2026-06-22 02:46:01.859 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/cinemas/qwww.jpeg - null null
+2026-06-22 02:46:01.858 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/cinemas/2.png - null null
+2026-06-22 02:46:01.861 +03:00 [INF] Sending file. Request path: '/images/cinemas/32.jpeg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/cinemas/32.jpeg'
+2026-06-22 02:46:01.861 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/cinemas/32.jpeg - 200 11999 image/jpeg 3.0111ms
+2026-06-22 02:46:01.859 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/cinemas/222.png - null null
+2026-06-22 02:46:01.865 +03:00 [INF] Sending file. Request path: '/images/cinemas/222.png'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/cinemas/222.png'
+2026-06-22 02:46:01.866 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/cinemas/222.png - 200 1831 image/png 6.5584ms
+2026-06-22 02:46:01.864 +03:00 [INF] Sending file. Request path: '/images/cinemas/2.png'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/cinemas/2.png'
+2026-06-22 02:46:01.868 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/cinemas/2.png - 200 9043 image/png 9.4725ms
+2026-06-22 02:46:01.860 +03:00 [INF] Sending file. Request path: '/images/cinemas/qwww.jpeg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/cinemas/qwww.jpeg'
+2026-06-22 02:46:01.869 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/cinemas/qwww.jpeg - 200 9510 image/jpeg 9.6736ms
+2026-06-22 02:46:03.795 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/Producers - null null
+2026-06-22 02:46:03.797 +03:00 [INF] Executing endpoint 'eTickets.Controllers.ProducersController.Index (E-tickets.UI)'
+2026-06-22 02:46:03.806 +03:00 [INF] Route matched with {action = "Index", controller = "Producers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller eTickets.Controllers.ProducersController (E-tickets.UI).
+2026-06-22 02:46:03.808 +03:00 [INF] Executing action method eTickets.Controllers.ProducersController.Index (E-tickets.UI) - Validation state: "Valid"
+2026-06-22 02:46:03.817 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Bio", p."FullName", p."ProfilePictureURL"
+FROM "Producers" AS p
+2026-06-22 02:46:03.829 +03:00 [INF] Executed action method eTickets.Controllers.ProducersController.Index (E-tickets.UI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 20.6395ms.
+2026-06-22 02:46:03.830 +03:00 [INF] Executing ViewResult, running view Index.
+2026-06-22 02:46:03.851 +03:00 [INF] Executed ViewResult - view Index executed in 21.0943ms.
+2026-06-22 02:46:03.851 +03:00 [INF] Executed action eTickets.Controllers.ProducersController.Index (E-tickets.UI) in 44.6614ms
+2026-06-22 02:46:03.851 +03:00 [INF] Executed endpoint 'eTickets.Controllers.ProducersController.Index (E-tickets.UI)'
+2026-06-22 02:46:03.851 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/Producers - 200 null text/html; charset=utf-8 56.3637ms
+2026-06-22 02:46:03.859 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/eTickets.styles.css - null null
+2026-06-22 02:46:03.860 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/producers/Will-Packer-Producer.jpg - null null
+2026-06-22 02:46:03.860 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/eTickets.styles.css - 404 0 null 1.3587ms
+2026-06-22 02:46:03.861 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://0.0.0.0:5046/eTickets.styles.css, Response status code: 404
+2026-06-22 02:46:03.861 +03:00 [INF] Request starting HTTP/1.1 GET http://0.0.0.0:5046/images/producers/images.jpeg - null null
+2026-06-22 02:46:03.862 +03:00 [INF] Sending file. Request path: '/images/producers/images.jpeg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/producers/images.jpeg'
+2026-06-22 02:46:03.862 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/producers/images.jpeg - 200 12456 image/jpeg 1.4908ms
+2026-06-22 02:46:03.863 +03:00 [INF] Sending file. Request path: '/images/producers/Will-Packer-Producer.jpg'. Physical path: '/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/wwwroot/images/producers/Will-Packer-Producer.jpg'
+2026-06-22 02:46:03.863 +03:00 [INF] Request finished HTTP/1.1 GET http://0.0.0.0:5046/images/producers/Will-Packer-Producer.jpg - 200 431575 image/jpeg 3.1171ms
+2026-06-22 02:46:15.140 +03:00 [INF] Application is shutting down...

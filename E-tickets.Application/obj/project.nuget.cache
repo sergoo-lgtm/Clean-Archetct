@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QQqGl45DuJI=",
+  "dgSpecHash": "W5dc9MkgkOM=",
   "success": true,
-  "projectFilePath": "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj",
+  "projectFilePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj",
   "expectedPackageFiles": [
     "/Users/yousef/.nuget/packages/microsoft.aspnetcore.authentication/2.3.0/microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "/Users/yousef/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.3.0/microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
@@ -69,9 +69,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'Newtonsoft.Json' 9.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj",
+      "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj",
+      "filePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net10.0"
@@ -81,9 +81,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-37gx-xxp4-5rgx",
-      "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj",
+      "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj",
+      "filePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -93,9 +93,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-w3x6-4m5h-cxqf",
-      "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj",
+      "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj",
+      "filePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"

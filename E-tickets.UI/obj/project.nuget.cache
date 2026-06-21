@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lv9AcMsMj9o=",
+  "dgSpecHash": "Cm6tj7NMlWE=",
   "success": true,
-  "projectFilePath": "/Users/yousef/My-Repos/clean/E-tickets.UI/E-tickets.UI.csproj",
+  "projectFilePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/E-tickets.UI.csproj",
   "expectedPackageFiles": [
     "/Users/yousef/.nuget/packages/azure.core/1.47.1/azure.core.1.47.1.nupkg.sha512",
     "/Users/yousef/.nuget/packages/azure.identity/1.14.2/azure.identity.1.14.2.nupkg.sha512",
@@ -147,9 +147,9 @@
       "code": "NU1901",
       "level": "Warning",
       "message": "Package 'NuGet.Packaging' 6.12.1 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
-      "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.UI/E-tickets.UI.csproj",
+      "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/E-tickets.UI.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/yousef/My-Repos/clean/E-tickets.UI/E-tickets.UI.csproj",
+      "filePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/E-tickets.UI.csproj",
       "libraryId": "NuGet.Packaging",
       "targetGraphs": [
         "net10.0"
@@ -159,9 +159,9 @@
       "code": "NU1901",
       "level": "Warning",
       "message": "Package 'NuGet.Protocol' 6.12.1 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
-      "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.UI/E-tickets.UI.csproj",
+      "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/E-tickets.UI.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/yousef/My-Repos/clean/E-tickets.UI/E-tickets.UI.csproj",
+      "filePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.UI/E-tickets.UI.csproj",
       "libraryId": "NuGet.Protocol",
       "targetGraphs": [
         "net10.0"

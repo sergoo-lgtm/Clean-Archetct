@@ -5297,11 +5297,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yousef/My-Repos/clean/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
+      "projectUniqueName": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
       "projectName": "E-tickets.Infrastructure",
-      "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
+      "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
       "packagesPath": "/Users/yousef/.nuget/packages/",
-      "outputPath": "/Users/yousef/My-Repos/clean/E-tickets.Infrastructure/obj/",
+      "outputPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/yousef/.nuget/NuGet/NuGet.Config"
@@ -5317,11 +5317,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj": {
-              "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Application/E-tickets.Application.csproj"
+            "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj": {
+              "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Application/E-tickets.Application.csproj"
             },
-            "/Users/yousef/My-Repos/clean/E-tickets.Domain/E-tickets.Domain.csproj": {
-              "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Domain/E-tickets.Domain.csproj"
+            "/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/E-tickets.Domain.csproj": {
+              "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/E-tickets.Domain.csproj"
             }
           }
         }

@@ -23,3 +23,16 @@
 /Users/yousef/My-Repos/clean/E-tickets.Domain/obj/Debug/net10.0/refint/E-tickets.Domain.dll
 /Users/yousef/My-Repos/clean/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.pdb
 /Users/yousef/My-Repos/clean/E-tickets.Domain/obj/Debug/net10.0/ref/E-tickets.Domain.dll
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/bin/Debug/net10.0/E-tickets.Domain.deps.json
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/bin/Debug/net10.0/E-tickets.Domain.dll
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/bin/Debug/net10.0/E-tickets.Domain.pdb
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.csproj.AssemblyReference.cache
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.AssemblyInfoInputs.cache
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.AssemblyInfo.cs
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.csproj.CoreCompileInputs.cache
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.sourcelink.json
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.dll
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/refint/E-tickets.Domain.dll
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/E-tickets.Domain.pdb
+/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/Debug/net10.0/ref/E-tickets.Domain.dll

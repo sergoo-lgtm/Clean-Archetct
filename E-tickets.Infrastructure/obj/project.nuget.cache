@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uPe+SI4wMBc=",
+  "dgSpecHash": "bicrb46YxXU=",
   "success": true,
-  "projectFilePath": "/Users/yousef/My-Repos/clean/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
+  "projectFilePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/yousef/.nuget/packages/azure.core/1.47.1/azure.core.1.47.1.nupkg.sha512",
     "/Users/yousef/.nuget/packages/azure.identity/1.14.2/azure.identity.1.14.2.nupkg.sha512",
@@ -109,9 +109,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-37gx-xxp4-5rgx",
-      "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
+      "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/yousef/My-Repos/clean/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
+      "filePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"
@@ -121,9 +121,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Security.Cryptography.Xml' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-w3x6-4m5h-cxqf",
-      "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
+      "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
       "warningLevel": 1,
-      "filePath": "/Users/yousef/My-Repos/clean/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
+      "filePath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Infrastructure/E-tickets.Infrastructure.csproj",
       "libraryId": "System.Security.Cryptography.Xml",
       "targetGraphs": [
         "net10.0"

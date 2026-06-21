@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yousef/My-Repos/clean/E-tickets.Domain/E-tickets.Domain.csproj": {}
+    "/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/E-tickets.Domain.csproj": {}
   },
   "projects": {
-    "/Users/yousef/My-Repos/clean/E-tickets.Domain/E-tickets.Domain.csproj": {
+    "/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/E-tickets.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yousef/My-Repos/clean/E-tickets.Domain/E-tickets.Domain.csproj",
+        "projectUniqueName": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/E-tickets.Domain.csproj",
         "projectName": "E-tickets.Domain",
-        "projectPath": "/Users/yousef/My-Repos/clean/E-tickets.Domain/E-tickets.Domain.csproj",
+        "projectPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/E-tickets.Domain.csproj",
         "packagesPath": "/Users/yousef/.nuget/packages/",
-        "outputPath": "/Users/yousef/My-Repos/clean/E-tickets.Domain/obj/",
+        "outputPath": "/Users/yousef/mysite/Clean-Archetct/E-tickets.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yousef/.nuget/NuGet/NuGet.Config"

@@ -37,6 +37,30 @@ public class MovieService
         });
     }
 
+    public async Task<IEnumerable<MovieDto>> SearchMoviesAsync(string searchString)
+    {
+        var movies = await _unitOfWork.Movies.GetAll
+            .AsNoTracking()
+            .Include(m => m.Cinema)
+            .Include(m => m.Producer)
+            .Where(m => m.Name.Contains(searchString))
+            .OrderBy(m => m.Name)
+            .ToListAsync();
+
+        return movies.Select(m => new MovieDto
+        {
+            Id = m.Id,
+            Name = m.Name,
+            Description = m.Description,
+            StartDate = m.StartDate,
+            EndDate = m.EndDate,
+            Price = m.Price,
+            ImageURL = m.ImageURL,
+            MovieCategory = m.MovieCategory,
+            CinemaName = m.Cinema.Name,
+            ProducerName = m.Producer.FullName
+        });
+    }
     public async Task<MovieDto> GetMovieDetailsAsync(int id)
     {
         var movie = await _unitOfWork.Movies.GetAll
